@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Utilizamos una fuente legible y limpia */
+            background-color: #f9f9f9; /* Un color de fondo suave */
+        }
+
+        .INFORMACION {
+            text-align: center; /* Centramos el contenido */
+            margin: 50px auto; /* Añadimos un margen para separar del borde de la ventana */
+            padding: 20px;
+            border: 1px solid #ddd; /* Un borde sutil */
+            border-radius: 5px; /* Añadimos esquinas redondeadas */
+            max-width: 400px; /* Limitamos el ancho para que no se vea demasiado extendido */
+            background-color: #fff; /* Un fondo blanco para resaltar el contenido */
+        }
+
+        h1 {
+            font-size: 24px; /* Tamaño grande para los encabezados */
+            color: #ff0000; /* Cambiamos el color a rojo */
+            margin-bottom: 10px; /* Espacio entre los encabezados */
+        }
+    </style>
+</head>
+<body>
+    {% for f in fichas %}
+    <div class="INFORMACION">
+        <h1>FICHA:</h1>
+        <h1>{{f.numero}}</h1>
+        <h1>DOCTOR:</h1>
+        <h1>{{f.doctor}}</h1>
+    </div>
+    {% endfor %}
+</body>
+</html>
